@@ -6,12 +6,14 @@
  * Time: 19:17
  */
 
+namespace EServicial\Spec;
+
 use Kahlan\Extra\Matcher\ExtraMatchers;
 
 ExtraMatchers::register(["toBeOneOf"]);
 
 describe("ProductMock", function(){
-    beforeAll(function(){
+    given('client', function(){
         $sdkParams = [
             'format' => 'json',
             'headers' => [
@@ -19,7 +21,11 @@ describe("ProductMock", function(){
             ]
         ];
 
-        $this->client = new RestClient($sdkParams);
+        return new \RestClient($sdkParams);
+    });
+
+    given('productMock', function () {
+        return new \EServicial\Mocks\ProductsMock();
     });
 
     describe("::findAll()", function(){

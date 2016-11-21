@@ -17,12 +17,18 @@
         }
     ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "test": "kahlan --reporter=verbose"
     },
     "autoload" : {
-        "psr-0" : {
-            "Test" : "src/"
+        "psr-4": {
+            "EServicial\\": "src/Test/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+             "EServicial\\Spec\\": "spec/"
         }
     }
 }
