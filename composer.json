@@ -1,0 +1,28 @@
+{
+    "name": "kaijiro/test",
+    "description": "Test for Kahlan",
+    "require": {
+        "fzaninotto/faker": "^1.6",
+        "gears/router": "dev-master",
+        "tcdent/php-restclient": "^0.1.5"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^3.0",
+        "kahlan/extra-matcher": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Tristan LASALLE",
+            "email": "tristan.lasalle@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "scripts": {
+        "test": "kahlan --reporter=verbose"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "Test" : "src/"
+        }
+    }
+}
